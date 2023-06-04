@@ -21,6 +21,12 @@ typedef struct	s_chess_game
 		int				curent_player;
 }		t_chess_game;
 
+typedef struct s_chess_game
+{
+	int	x;
+	int	y;
+}		t_coordinates;
+
 void    print_string(char *str);
 
 void    simple_print(t_chess_game *chess_game);
