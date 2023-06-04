@@ -1,11 +1,18 @@
+CC = gcc
+CFLAGS = -Wall -Wextra -g
 
+SRCS = $(wildcard *.c)
+OBJS = $(SRCS:.c=.o)
 
-all: chess
+TARGET = chess_program
 
-chess: 
-	gcc -fsanitize=address *.c -o chess
-# gcc *.c -o chess
+all: $(TARGET)
 
-re:
-	rm chess
-	make chess
+$(TARGET): $(OBJS)
+	$(CC) $(CFLAGS) -o $@ $^
+
+%.o: %.c
+	$(CC) $(CFLAGS) -c $< -o $@
+
+clean:
+	rm -f $(OBJS) $(TARGET)

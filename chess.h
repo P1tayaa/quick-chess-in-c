@@ -1,6 +1,7 @@
 
 
 #include <unistd.h>
+#include <fcntl.h>
 #include <stdlib.h>
 #include <stdbool.h>
 
@@ -21,7 +22,7 @@ typedef struct	s_chess_game
 		int				curent_player;
 }		t_chess_game;
 
-typedef struct s_chess_game
+typedef struct s_coordinates
 {
 	int	x;
 	int	y;
