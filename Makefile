@@ -4,7 +4,7 @@ CFLAGS = -Wall -Wextra -g
 SRCS = $(wildcard *.c)
 OBJS = $(SRCS:.c=.o)
 
-TARGET = chess_program
+TARGET = chess
 
 all: $(TARGET)
 

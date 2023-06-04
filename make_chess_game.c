@@ -55,10 +55,9 @@ t_chess_game    *make_chess_game(void)
 	chess_game -> number_of_cell = 8;
 	chess_game -> curent_player = 0;
 	chess_game->board = make_board();
-	if (! chess_game->board)
+	if (chess_game->board == NULL)
 		return (free(chess_game),NULL);
 	set_pieces(&chess_game);
-	simple_print(chess_game);
-	free_board(chess_game->board);
-	free(chess_game);
+	// simple_print(chess_game);
+	return(chess_game);
 }

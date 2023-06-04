@@ -77,5 +77,4 @@ void    simple_print(t_chess_game *chess_game)
 		print_string("\n");
 		i++;
 	}
-	
 }
